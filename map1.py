@@ -1,4 +1,10 @@
 import folium
+import pandas
+
+data = pandas.read_csv("Volcanoes.txt")
+lat = list(data["LON"])
+lon = list(data["LAT"])
+
 map = folium.Map(location=[38.58, -99.09], zoom_start=6, tiles="Stamen Terrain")
 
 fg = folium.FeatureGroup(name="My Map")
